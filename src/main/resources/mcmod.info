@@ -1,0 +1,16 @@
+[{
+  "modid": "wastemanagement",
+  "name": "Waste Management",
+  "description": "Don't know what to do with all that cobblestone and other junk? We have some solutions for you.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "logoFile": "",
+  "url": "https://github.com/NPException/waste-management",
+  "updateJSON": "",
+  "authorList": ["NPException"],
+  "credits": "",
+  "useDependencyInformation": true,
+  "requiredMods": [],
+  "dependencies": [],
+  "dependants": []
+}]
