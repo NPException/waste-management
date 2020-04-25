@@ -11,6 +11,6 @@
   "credits": "",
   "useDependencyInformation": true,
   "requiredMods": [],
-  "dependencies": [],
+  "dependencies": ["required-after:forge@[14.23.5.2847,)"],
   "dependants": []
 }]

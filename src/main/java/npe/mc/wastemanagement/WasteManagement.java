@@ -5,11 +5,16 @@ import static npe.mc.wastemanagement.WasteManagement.MOD_NAME;
 
 import org.apache.logging.log4j.Logger;
 
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Config;
+import net.minecraftforge.common.config.ConfigManager;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent.OnConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import npe.mc.wastemanagement.proxy.CommonProxy;
 
 @SuppressWarnings("StaticNonFinalField")
@@ -20,7 +25,7 @@ public final class WasteManagement {
 	public static final String MOD_NAME = "Waste Management";
 
 	@SidedProxy(clientSide = "npe.mc.wastemanagement.proxy.ClientProxy",
-			  serverSide = "npe.mc.wastemanagement.proxy.ServerProxy")
+			  serverSide = "npe.mc.wastemanagement.proxy.CommonProxy")
 	public static CommonProxy proxy;
 
 	@Mod.Instance
@@ -33,9 +38,7 @@ public final class WasteManagement {
 		logger = event.getModLog();
 		proxy.preInit(event);
 
-		System.out.println(Config.isThisAGoodTutorial);
-		System.out.println(Config.yourRealName);
-		System.out.println(Config.dimensions.spaceDimId);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Mod.EventHandler
@@ -46,5 +49,12 @@ public final class WasteManagement {
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent e) {
 		proxy.postInit(e);
+	}
+
+	@SubscribeEvent
+	public void onConfigChangedEvent(OnConfigChangedEvent event) {
+		if (event.getModID().equals(WasteManagement.MOD_ID)) {
+			ConfigManager.sync(WasteManagement.MOD_ID, Config.Type.INSTANCE);
+		}
 	}
 }
