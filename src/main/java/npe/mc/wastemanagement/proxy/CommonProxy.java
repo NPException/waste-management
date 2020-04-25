@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import npe.mc.wastemanagement.common.ModBlocks;
+import npe.mc.wastemanagement.common.ModItems;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -30,5 +31,6 @@ public class CommonProxy {
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		ModBlocks.registerItemBlocks(event.getRegistry());
+		ModItems.registerItems(event.getRegistry());
 	}
 }
