@@ -19,7 +19,7 @@ public final class WasteManagement {
 	public static final String MOD_ID = "wastemanagement";
 	public static final String MOD_NAME = "Waste Management";
 
-	@SidedProxy(clientSide = "npe.mc.wastemangement.proxy.ClientProxy",
+	@SidedProxy(clientSide = "npe.mc.wastemanagement.proxy.ClientProxy",
 			  serverSide = "npe.mc.wastemanagement.proxy.ServerProxy")
 	public static CommonProxy proxy;
 
@@ -32,6 +32,10 @@ public final class WasteManagement {
 	public void preInit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
 		proxy.preInit(event);
+
+		System.out.println(Config.isThisAGoodTutorial);
+		System.out.println(Config.yourRealName);
+		System.out.println(Config.dimensions.spaceDimId);
 	}
 
 	@Mod.EventHandler
