@@ -1,18 +1,32 @@
 package npe.mc.wastemanagement.common;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 import npe.mc.wastemanagement.common.item.ItemBase;
 import npe.mc.wastemanagement.util.ModUtils;
 
-@SuppressWarnings("StaticNonFinalField")
 public final class ModItems {
-	// add items here
-	public static ItemBase singularityAnalyzer = new ItemBase("singularity_analyzer");
+	///////////
+	// ITEMS //
+	///////////
 
+	public static final ItemBase singularityAnalyzer = new ItemBase("singularity_analyzer");
+
+
+	/////////////
+	// METHODS //
+	/////////////
 
 	public static void registerItems(IForgeRegistry<Item> registry) {
-		ModUtils.publicStaticValues(ModItems.class, Item.class)
+		ModUtils.publicStaticValues(ModItems.class, ItemBase.class)
 				  .forEach(registry::register);
+	}
+
+	@SideOnly(Side.CLIENT)
+	public static void initModels() {
+		ModUtils.publicStaticValues(ModItems.class, ItemBase.class)
+				  .forEach(ItemBase::initModel);
 	}
 }
