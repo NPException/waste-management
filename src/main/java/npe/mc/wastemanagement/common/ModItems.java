@@ -1,8 +1,5 @@
 package npe.mc.wastemanagement.common;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 import npe.mc.wastemanagement.common.item.ItemBase;
@@ -12,16 +9,11 @@ public final class ModItems {
 	// add items here
 	public static ItemBase singularityAnalyzer;
 
-	// registration functionality //
 
 	public static void registerItems(IForgeRegistry<Item> registry) {
-		List<Item> items = new ArrayList<>();
-
-		// add items here
-		items.add(singularityAnalyzer = new ItemBase("singularity_analyzer"));
-
-		for (Item item : items) {
-			registry.register(item);
-		}
+		registry.registerAll(
+				  // instantiate items here (put comma at the start of line to minimize git changes)
+				  singularityAnalyzer = new ItemBase("singularity_analyzer")
+		);
 	}
 }
