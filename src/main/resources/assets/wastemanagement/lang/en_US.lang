@@ -7,4 +7,6 @@ tile.wastemanagement.singularity_unit.name=Singularity Unit
 
 
 # tutorial
+tile.wastemanagement.datablock.name=McJty Tut Datablock
 message.wastemanagement.counter_par=Counter: %d
+tile.wastemanagement.blinkingblock.name=McJty Tut Blinking Block

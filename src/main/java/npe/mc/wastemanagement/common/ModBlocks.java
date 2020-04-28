@@ -14,8 +14,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 import npe.mc.wastemanagement.WasteManagement;
+import npe.mc.wastemanagement.common.block.BlinkingBlock;
 import npe.mc.wastemanagement.common.block.BlockBase;
 import npe.mc.wastemanagement.common.block.DataBlock;
+import npe.mc.wastemanagement.common.tileentity.BlinkingTileEntity;
 import npe.mc.wastemanagement.common.tileentity.DataTileEntity;
 import npe.mc.wastemanagement.util.ModUtils;
 
@@ -28,6 +30,7 @@ public final class ModBlocks {
 
 	// tutorial blocks
 	public static final DataBlock dataBlock = new DataBlock();
+	public static final BlinkingBlock blinkingBlock = new BlinkingBlock();
 
 
 	///////////////////
@@ -35,6 +38,7 @@ public final class ModBlocks {
 	///////////////////
 
 	private static final List<Class<? extends TileEntity>> tileClasses = Arrays.asList(
+			  BlinkingTileEntity.class,
 			  DataTileEntity.class
 	);
 
