@@ -4,6 +4,8 @@ item.wastemanagement.singularity_analyzer.name=Singularity Analyzer
 # blocks
 tile.wastemanagement.singularity_unit.name=Singularity Unit
 
+# creative tab
+itemGroup.wastemanagement.tab=Waste Management
 
 
 # tutorial

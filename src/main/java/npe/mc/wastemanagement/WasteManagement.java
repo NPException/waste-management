@@ -5,6 +5,9 @@ import static npe.mc.wastemanagement.WasteManagement.MOD_NAME;
 
 import org.apache.logging.log4j.Logger;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
@@ -15,6 +18,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import npe.mc.wastemanagement.common.ModBlocks;
 import npe.mc.wastemanagement.proxy.CommonProxy;
 
 @SuppressWarnings("StaticNonFinalField")
@@ -32,6 +38,13 @@ public final class WasteManagement {
 	public static WasteManagement instance;
 
 	public static Logger logger;
+
+	public static final CreativeTabs TAB = new CreativeTabs(WasteManagement.MOD_ID + ".tab") {
+		@SideOnly(Side.CLIENT)
+		public ItemStack getTabIconItem() {
+			return new ItemStack(Item.getItemFromBlock(ModBlocks.singularityUnit));
+		}
+	};
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

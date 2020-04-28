@@ -16,6 +16,7 @@ public class BlockBase extends Block {
 		super(material);
 		setRegistryName(name);
 		setUnlocalizedName(WasteManagement.MOD_ID + "." + name);
+		setCreativeTab(WasteManagement.TAB);
 	}
 
 	@SuppressWarnings("NullableProblems")

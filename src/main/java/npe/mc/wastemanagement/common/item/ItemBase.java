@@ -12,6 +12,7 @@ public class ItemBase extends Item {
 	public ItemBase(String name) {
 		setRegistryName(name);
 		setUnlocalizedName(WasteManagement.MOD_ID + "." + name);
+		setCreativeTab(WasteManagement.TAB);
 	}
 
 	@SideOnly(Side.CLIENT)
