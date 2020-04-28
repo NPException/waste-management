@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+	"model": "wastemanagement:singularity_unit"
+  },
+  "variants": {
+	"normal": [{}],
+	"inventory": [{}]
+  }
+}
