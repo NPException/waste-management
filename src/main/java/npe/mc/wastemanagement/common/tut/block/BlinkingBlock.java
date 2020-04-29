@@ -1,4 +1,4 @@
-package npe.mc.wastemanagement.common.block;
+package npe.mc.wastemanagement.common.tut.block;
 
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -12,7 +12,8 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import npe.mc.wastemanagement.common.tileentity.BlinkingTileEntity;
+import npe.mc.wastemanagement.common.block.BlockBase;
+import npe.mc.wastemanagement.common.tut.tileentity.BlinkingTileEntity;
 
 public class BlinkingBlock extends BlockBase implements ITileEntityProvider {
 

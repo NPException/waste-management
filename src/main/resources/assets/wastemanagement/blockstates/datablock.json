@@ -1,7 +1,7 @@
 {
   "forge_marker": 1,
   "defaults": {
-	"model": "wastemanagement:datablock"
+	"model": "wastemanagement:tut/datablock"
   },
   "variants": {
 	"normal": [{}],

@@ -1,4 +1,4 @@
-package npe.mc.wastemanagement.common.block;
+package npe.mc.wastemanagement.common.tut.block;
 
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -16,7 +16,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import npe.mc.wastemanagement.common.tileentity.DataTileEntity;
+import npe.mc.wastemanagement.common.block.BlockBase;
+import npe.mc.wastemanagement.common.tut.tileentity.DataTileEntity;
 
 public class DataBlock extends BlockBase implements ITileEntityProvider {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", Plane.HORIZONTAL);

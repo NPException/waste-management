@@ -1,9 +1,9 @@
 {
   "forge_marker": 1,
   "defaults": {
-	"model": "wastemanagement:blinkingblock",
+	"model": "wastemanagement:tut/blinkingblock",
 	"textures": {
-	  "txt": "wastemanagement:blocks/blinkingtexture"
+	  "txt": "wastemanagement:blocks/tut/blinkingtexture"
 	}
   },
   "variants": {
@@ -13,7 +13,7 @@
 	  "false": {},
 	  "true": {
 		"textures": {
-		  "txt": "wastemanagement:blocks/blinkingtexture_on"
+		  "txt": "wastemanagement:blocks/tut/blinkingtexture_on"
 		}
 	  }
 	}

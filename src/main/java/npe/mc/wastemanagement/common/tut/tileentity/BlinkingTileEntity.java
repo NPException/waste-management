@@ -1,4 +1,4 @@
-package npe.mc.wastemanagement.common.tileentity;
+package npe.mc.wastemanagement.common.tut.tileentity;
 
 import java.util.List;
 

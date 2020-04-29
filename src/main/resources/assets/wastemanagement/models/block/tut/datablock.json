@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+	"particle": "wastemanagement:blocks/tut/blocktexture",
+	"down": "wastemanagement:blocks/tut/blocktexture",
+	"up": "wastemanagement:blocks/tut/blocktexture",
+	"east": "wastemanagement:blocks/tut/blocktexture",
+	"west": "wastemanagement:blocks/tut/blocktexture",
+	"north": "wastemanagement:blocks/tut/datablocktexture",
+	"south": "wastemanagement:blocks/tut/blocktexture"
+  }
+}
