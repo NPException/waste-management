@@ -3,7 +3,6 @@ package npe.mc.wastemanagement.common.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -17,13 +16,6 @@ public class BlockBase extends Block {
 		setRegistryName(name);
 		setUnlocalizedName(WasteManagement.MOD_ID + "." + name);
 		setCreativeTab(WasteManagement.TAB);
-	}
-
-	@SuppressWarnings("NullableProblems")
-	@Override
-	public BlockBase setCreativeTab(CreativeTabs tab) {
-		super.setCreativeTab(tab);
-		return this;
 	}
 
 	@SideOnly(Side.CLIENT)
