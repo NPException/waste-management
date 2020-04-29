@@ -12,3 +12,4 @@ itemGroup.wastemanagement.tab=Waste Management
 tile.wastemanagement.datablock.name=McJty Tut Datablock
 message.wastemanagement.counter_par=Counter: %d
 tile.wastemanagement.blinkingblock.name=McJty Tut Blinking Block
+tile.wastemanagement.pedestalblock.name=McJty Tut Pedestal Block

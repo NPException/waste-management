@@ -1,0 +1,12 @@
+IntelliJ IDEA
+# Blender MTL File: 'pedestalhandles.blend'
+# Material Count: 1
+
+newmtl None
+
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+
+d 1
+
+map_Kd wastemanagement:blocks/tut/pedestaltexture
