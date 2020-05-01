@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import npe.mc.wastemanagement.WasteManagement;
 import npe.mc.wastemanagement.common.ModBlocks;
 import npe.mc.wastemanagement.common.ModItems;
 
@@ -18,6 +20,7 @@ public class CommonProxy {
 	}
 
 	public void init(FMLInitializationEvent event) {
+		NetworkRegistry.INSTANCE.registerGuiHandler(WasteManagement.instance, new GuiProxy());
 	}
 
 	public void postInit(FMLPostInitializationEvent event) {

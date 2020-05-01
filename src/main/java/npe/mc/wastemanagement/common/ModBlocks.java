@@ -22,9 +22,11 @@ import npe.mc.wastemanagement.common.block.BlockBase;
 import npe.mc.wastemanagement.common.tut.block.BlinkingBlock;
 import npe.mc.wastemanagement.common.tut.block.DataBlock;
 import npe.mc.wastemanagement.common.tut.block.PedestalBlock;
+import npe.mc.wastemanagement.common.tut.block.testcontainer.TestContainerBlock;
 import npe.mc.wastemanagement.common.tut.tileentity.BlinkingTileEntity;
 import npe.mc.wastemanagement.common.tut.tileentity.DataTileEntity;
 import npe.mc.wastemanagement.common.tut.tileentity.PedestalTileEntity;
+import npe.mc.wastemanagement.common.tut.tileentity.TestContainerTileEntity;
 import npe.mc.wastemanagement.util.ModUtils;
 
 public final class ModBlocks {
@@ -38,6 +40,7 @@ public final class ModBlocks {
 	public static final DataBlock dataBlock = new DataBlock();
 	public static final BlinkingBlock blinkingBlock = new BlinkingBlock();
 	public static final PedestalBlock pedestalBlock = new PedestalBlock();
+	public static final TestContainerBlock testContainerBlock = new TestContainerBlock();
 
 
 	///////////////////
@@ -45,6 +48,7 @@ public final class ModBlocks {
 	///////////////////
 
 	private static final List<Class<? extends TileEntity>> tileClasses = Arrays.asList(
+			  TestContainerTileEntity.class,
 			  PedestalTileEntity.class,
 			  BlinkingTileEntity.class,
 			  DataTileEntity.class
